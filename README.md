@@ -28,6 +28,7 @@ _Note: Raspberry Pi must be connected to the internet for installation steps bel
       * `interface eth0`
       * `static ip_address=10.28.81.18/24`
       * `static routers=10.28.81.1`
+      * `static domain_name_servers=10.28.81.1`
   * Use Ctrl-X to save the file and exit
   * Run `sudo reboot` to apply the static IP configuration changes
 
