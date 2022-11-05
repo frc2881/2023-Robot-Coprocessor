@@ -9,11 +9,19 @@ _Note: Raspberry Pi must be connected to the internet for installation steps bel
 * [ELP VGA USB camera module](https://www.amazon.com/dp/B01DRG250Q) (driver mode camera)
 
 ## Software
-### Operating System: install and configure Raspbian operating system
+### Operating System: install and configure Raspbian operating system, static IP networking
 * Image SD card with Raspbian Lite x64 (Bullseye)
 * Boot Raspberry Pi and connect via SSH
 * Login with default credentials (pi / raspberry)
-* Run `sudo raspi-config`, update config to expand filesystem and set GPU to use 256MB, then run `sudo reboot`
+* Run `sudo nano /etc/dhcpcd.conf`
+* Find the etho0 interface definition near the bottom and uncomment and update the following three lines (example for team 2881 IP configuration):
+  * `interface eth0`
+  * `static ip_address=10.28.81.18/24`
+  * `static routers=10.28.81.1`
+  * `static domain_name_servers=10.28.81.1`
+* Use Ctrl-X to save the file and exit
+* Run `sudo reboot` to apply the static IP configuration changes
+* Reconnect and run `sudo raspi-config`, update config to expand filesystem and set GPU to use 256MB, then run `sudo reboot`
 * Reconnect and run `sudo apt update` and `sudo apt upgrade` to pickup latest OS updates, then run `sudo reboot` (again)
 * Run `sudo apt install git`
 
@@ -21,16 +29,6 @@ _Note: Raspberry Pi must be connected to the internet for installation steps bel
 * Run `curl -sSL https://get.docker.com | sh`
 * Run `sudo usermod -aG docker pi`
 * Run `sudo reboot`
-
-### Networking: setting a static IP configuration (if needed per robot networking configuration in place of mDNS)
-  * Run `sudo nano /etc/dhcpcd.conf`
-  * Find the etho0 interface definition near the bottom and uncomment and update the following three lines (example for team 2881 IP configuration):
-      * `interface eth0`
-      * `static ip_address=10.28.81.18/24`
-      * `static routers=10.28.81.1`
-      * `static domain_name_servers=10.28.81.1`
-  * Use Ctrl-X to save the file and exit
-  * Run `sudo reboot` to apply the static IP configuration changes
 
 ## Subsystems
 ### PhotonVision
