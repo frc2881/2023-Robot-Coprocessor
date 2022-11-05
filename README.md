@@ -32,7 +32,7 @@ _Note: Raspberry Pi must be connected to the internet for installation steps bel
 
 ## Subsystems
 ### PhotonVision
-* See the [Other Debian-Based Co-Processor Installation](https://docs.photonvision.org/en/latest/docs/getting-started/installation/coprocessor-image.html#other-debian-based-co-processor-installation) steps in the PhotonVision documentation to install the latest
+* See the [Other Debian-Based Co-Processor Installation](https://docs.photonvision.org/en/latest/docs/getting-started/installation/install/other-coprocessors.html) steps in the PhotonVision documentation to install the latest (and/or install a beta version .jar file)
 * Run rm install.sh to clean up the PhotonVision install script
 
 ### BatteryInfoLogger
