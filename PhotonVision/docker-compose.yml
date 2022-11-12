@@ -1,0 +1,12 @@
+services:
+  photonvision:
+    build: .
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /dev/bus/usb:/dev/bus/usb
+    ports:
+      - 5800:5800
+    working_dir: /app
+    command: bash -c "chmod +x entrypoint.sh && ./entrypoint.sh"
