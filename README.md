@@ -4,9 +4,9 @@ Robot coprocessor (Raspberry Pi) imaging, install, and configuration
 _Note: Raspberry Pi must be connected to the internet for installation steps below after booting from default image. The easiest method is to use a second Raspberry Pi for the initial setup and then swapping the SD card out on the robot Raspberry Pi when ready._
 
 ## Hardware 
-* [Raspberry Pi 3 B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/) (PhotonVision does not currently use GPU with Raspberry Pi 4 models)
-* [ELP HD USB camera module](https://www.amazon.com/dp/B01HD1UZMQ) (vision pipeline processing camera with 100 degree horizontal FOV)
-* [ELP VGA USB camera module](https://www.amazon.com/dp/B01DRG250Q) (driver mode camera)
+* [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
+* [ELP HD Global Shutter USB camera module](http://www.webcamerausb.com/elp-global-shutter-usb-camera-high-frame-rate-720p-60fps-webcam-snap-without-shadow-camera-module-used-for-barcode-scanner-p-313.html) (vision pipeline processing camera with 100 degree horizontal FOV)
+* [ELP HD Fisheye USB camera module](http://www.webcamerausb.com/elp-170degree-wide-angle-camera-module-hd-8mp-sony-imx179-sensor-mini-usb20-security-webcam-for-baby-monitoring-camera-p-52.html) (driver mode camera)
 
 ## Software
 ### Operating System: install and configure Raspbian operating system, static IP networking
@@ -32,7 +32,8 @@ _Note: Raspberry Pi must be connected to the internet for installation steps bel
 
 ## Subsystems
 ### PhotonVision
-* See the [Other Debian-Based Co-Processor Installation](https://docs.photonvision.org/en/latest/docs/getting-started/installation/coprocessor-image.html#other-debian-based-co-processor-installation) steps in the PhotonVision documentation to install the latest
+* See the [Other Debian-Based Co-Processor Installation](https://docs.photonvision.org/en/latest/docs/getting-started/installation/sw_install/other-coprocessors.html) steps in the PhotonVision documentation to install the latest
+* See the docker container scripts in PhotonVision within this repo
 
 ### BatteryInfoLogger
 * Follow the readme doc for cloning, building, and configuring the dockerized python app in this repo: [BatteryInfoLogger](https://github.com/frc2881/BatteryInfoLogger)
