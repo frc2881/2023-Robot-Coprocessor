@@ -8,5 +8,9 @@ services:
       - /dev/bus/usb:/dev/bus/usb
     ports:
       - 5800:5800
+      - 1181:1181
+      - 1182:1182
+      - 1183:1183
+      - 1184:1184
     working_dir: /app
     command: bash -c "chmod +x entrypoint.sh && ./entrypoint.sh"
